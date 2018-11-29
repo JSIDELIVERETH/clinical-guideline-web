@@ -1,0 +1,49 @@
+<div class="row wrapper border-bottom white-bg page-heading ng-scope">
+  <div class="col-lg-10">
+    <h2>Symptoms</h2>
+  </div>
+  <div class="col-lg-2">
+
+  </div>
+</div>
+<div class="wrapper wrapper-content animated fadeInRight">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="ibox">
+        <div class="ibox-title">
+          <h5>Node List View</h5>
+          <div class="ibox-tools">
+            <a href routerLink="/nodes/new/node" class="btn btn-primary btn-xs">
+              <span class="glyphicon glyphicon-plus-sign"></span>
+              New Node</a>
+          </div>
+        </div>
+        <div class="ibox-content">
+          <table id="listViewTable" class="table table-responsive-sm table-hover">
+            <thead>
+            <tr>
+              <th>Internal ID</th>
+              <th>Name</th>
+              <th>Node Type</th>
+
+            </tr>
+            </thead>
+
+            <tbody>
+
+            <tr routerLink="/nodes/related/{{node.Id}}"  routerLinkActive="active" *ngFor="let node of nodeList">
+
+              <td>{{ node.Id }}</td>
+              <td>{{ node.Name }}</td>
+              <td>{{ node.NodeTypeName }}</td>
+
+            </tr>
+
+            </tbody>
+
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

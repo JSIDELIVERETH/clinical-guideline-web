@@ -1,0 +1,303 @@
+
+.boxTitle {
+  background-color: #f3f4f4;
+}
+
+.title-style {
+  font-weight: 600;
+  font-size: 17px;
+  text-align: center;
+  color: #1AB394;
+}
+
+input select {
+  /* background-color: #f3f3f4 !important; */
+  border-radius: 3px;
+}
+
+.center-absolute-horizontal {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.center-absolute {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+.center-absolute-vertical {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.topRowInternalContainer {
+
+  position: relative;
+  margin: 1em 0;
+  margin-top: 2em;
+  padding-top: 2em;
+  border-top: 3px solid #60e6c4;
+
+}
+
+.sectionTitle {
+  position: absolute;
+  text-align: center;
+  top: -1em;
+  color: #1AB394;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 3px 14px;
+  display: block;
+  background: white;
+
+}
+
+.leftColInternalContainer {
+  border-left: 4px solid #f3f4f4;
+  /* padding: 2px 15px; */
+}
+
+.rightColInternalContainer {
+  border-right: 4px solid #f3f4f4;
+}
+
+.widthSetter .form-group input {
+  width: 100%;
+}
+
+.form-group > div > input:focus + span {
+  color: #1AB394 !important;
+}
+
+#registerFacilityForm .ng-valid[required], .ng-valid.required {
+  border-left: 5px solid #42A948;
+}
+
+#registerFacilityForm .ng-dirty:not(form) {
+  border-left: 5px solid #a94442;
+}
+
+/*===========================================================================*/
+/*For Success Message popup*/
+.successMessageUL {
+  padding-left: 0;
+  padding-top: 5px;
+  list-style-type: none;
+  position: absolute;
+  z-index: 9999;
+  width: auto;
+}
+
+.closeButton2 {
+  background-color: #404040;
+  padding: 10px 14px;
+  margin-left: -5px;
+  margin-top: -9px;
+  position: absolute;
+  -webkit-box-shadow: 0px 2px 3px #404040;
+  -moz-box-shadow: 0px 2px 3px #404040;
+  box-shadow: 0px 2px 3px #404040;
+  color: #FFFFFF;
+  border: 1px solid #CCCCCC;
+  border-left: 0px;
+}
+
+.successMessage {
+  list-style-type: none;
+  color: #FFFFFF;
+  position: absolute;
+  float: left;
+  margin-top: 5px;
+  margin-left: 20px;
+  width: auto;
+  border: 2px solid #FFFFFF;
+  height: auto;
+  /* background-color: #388e3c;
+   list-style-type:none;width:auto;color:#FFFFFF;
+   font-size:18px;z-index:9999;float:right;*/
+  /* -webkit-box-shadow: 0px 2px 3px #404040;
+   -moz-box-shadow: 0px 2px 3px #404040;
+   box-shadow: 0px 2px 3px #404040;
+   font-family: Sans-serif;*/
+}
+
+.successMessageUL.ng-hide-remove,
+.successMessageUL.ng-hide {
+  position: absolute;
+  transition: 2s all ease;
+  -moz-transition: 2s all ease;
+  -webkit-transition: 1s all ease;
+}
+
+.successMessageUL.ng-hide-remove {
+  -webkit-animation: slideInRight 2s both ease;
+  -moz-animation: slideInRight 2s both ease;
+  animation: slideInRight 2s both ease;
+}
+
+.successMessageUL.ng-hide {
+  -webkit-animation: slideOutLeft 2s both ease;
+  -moz-animation: slideOutLeft 2s both ease;
+  animation: slideOutLeft 2s both ease;
+}
+
+@keyframes slideOutLeft {
+  to {
+    transform: translateX(-200%);
+  }
+}
+
+@-moz-keyframes slideOutLeft {
+  to {
+    -moz-transform: translateX(-200%);
+  }
+}
+
+@-webkit-keyframes slideOutLeft {
+  to {
+    -webkit-transform: translateX(-200%);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(-200%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@-moz-keyframes slideInRight {
+  from {
+    -moz-transform: translateX(-200%);
+  }
+  to {
+    -moz-transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes slideInRight {
+  from {
+    -webkit-transform: translateX(-200%);
+  }
+  to {
+    -webkit-transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes slideInTop {
+  from {
+    -webkit-transform: translateY(0);
+  }
+  to {
+    -webkit-transform: translateX(20%);
+  }
+}
+
+@-webkit-keyframes slideOutTop {
+  from {
+    -webkit-transform: translateY(20%);
+  }
+  to {
+    -webkit-transform: translateX(0%);
+  }
+}
+
+.successMessageHolder {
+  background-color: #60e6c4;
+  padding: 10px;
+  -webkit-box-shadow: 0px 2px 3px #404040;
+  -moz-box-shadow: 0px 2px 3px #404040;
+  box-shadow: 0px 2px 3px #404040;
+  color: #000000;
+  border: 1px solid #CCCCCC;
+  border-right: 0px;
+  font-size: 17px;
+  font-family: "System San Francisco Display Thin";
+}
+
+/*===========================================================================*/
+
+.slabel {
+  display: inline-block;
+  max-width: 100%;
+  position: relative;
+  /* width: 100%; */
+  font-family: "sans-serif";
+}
+
+.slabel input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 3px;
+  box-sizing: border-box;
+  display: inline-block;
+  outline: 0;
+
+  /* padding: 10px 25px; */
+  -webkit-transition: -webkit-transform 225ms ease-in-out;
+  transition: -webkit-transform 225ms ease-in-out;
+  transition: transform 225ms ease-in-out;
+  transition: transform 225ms ease-in-out, -webkit-transform 225ms ease-in-out;
+  width: 100%;
+
+}
+
+.slabel input + span {
+  border: 0;
+  border-radius: 4px;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 1px 5%;
+  font-weight: lighter;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  -webkit-transition: -webkit-transform 225ms ease-in-out;
+  transition: -webkit-transform 225ms ease-in-out;
+  transition: transform 225ms ease-in-out;
+  transition: transform 225ms ease-in-out, -webkit-transform 225ms ease-in-out;
+  width: 100%;
+  color: inherit;
+}
+
+.slabel input + span:before, .slabel input + span:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  left: 0;
+  z-index: -1;
+  -webkit-transition: -webkit-transform 225ms ease-in-out;
+  transition: -webkit-transform 225ms ease-in-out;
+  transition: transform 225ms ease-in-out;
+  transition: transform 225ms ease-in-out, -webkit-transform 225ms ease-in-out;
+}
+
+.slabel input + span:before {
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+
+.slabel input:focus + span {
+  border: 0;
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+}

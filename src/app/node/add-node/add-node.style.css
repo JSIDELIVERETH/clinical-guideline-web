@@ -1,0 +1,11 @@
+.action-buttons{
+  float: right; margin-bottom: 3.5em
+}
+.action-buttons button{
+  width: 5em;
+  padding: 5px 0px;
+  text-align: center;
+}
+.action-buttons button:first-child{
+  margin-right:1em;
+}

@@ -1,0 +1,38 @@
+.table {
+  background: white;
+}
+#listViewTable tbody tr{
+  cursor:pointer;
+}
+#listViewTable tbody tr td span:not(:last-child){
+  margin-right: 0.3em;
+}
+
+#listViewTable tbody tr:focus,
+#listViewTable tbody tr:active
+{
+  outline:none !important;
+}
+.approvedLabel {
+  color: green;
+  font-weight: 500
+}
+
+.savedLabel {
+  color: red;
+  font-weight: 500
+}
+
+#registerBtn {
+  background: #1AB394;
+  color: white;
+  float: right;
+  font-size: 1em;
+}
+
+#registerBtn span {
+  font-size: 1.3em;
+  padding: 0.2em 0;
+  margin-right: 0.5em;
+  color: white;
+}

@@ -1,0 +1,101 @@
+<!-- <h1> New Node Page</h1> -->
+<div class="row wrapper border-bottom white-bg page-heading ng-scope">
+  <div class="col-lg-10">
+    <h2>Register New Node</h2>
+  </div>
+  <div class="col-lg-2">
+  </div>
+</div>
+
+
+<div [hidden]="!submitted" class="container" style="width: 100%;">
+  <i class="fa fa-circle-o-notch fa-spin center-absolute" style="font-size:4em; color: #1AB394;"></i>
+</div>
+<div class="alert alert-success" *ngIf="displaySuccessMessage">
+  <i class="fa fa-check-circle fa-lg" style="padding-right: 10px"></i>Node is Successfully Submitted!
+  <button type="button" class="close" ng-click="displaySuccessMessage != displaySuccessMessage">&times;</button>
+</div>
+<div class="alert alert-danger" *ngIf="displayErrorMessage">
+  <i class="fa fa-times-circle fa-lg" style="padding-right: 10px"></i>Form Not Registered! {{ errorMessage }}
+  <button type="button" class="close" ng-click="displayErrorMessage != displayErrorMessage">&times;</button>
+</div>
+<div class="container" [hidden]="submitted" style="width: 100%; padding-top: 3em; overflow-y: auto; height: 100%;">
+
+
+  <form #createNodeForm="ngForm" id="registerNodeForm" novalidate (ngSubmit)="onSubmit(createNodeForm)">
+
+
+    <div class="ibox">
+      <div class="ibox-title boxTitle" style="border-bottom: 1px solid #f3f4f4">
+        <p class="title-style">Node Header Information</p>
+      </div>
+      <div class="ibox-content">
+        <div class="row">
+          <div class="col-md-6 rightColInternalContainer">
+            <section class="topRowInternalContainer">
+                <input type="text" class="form-control hidden" name="id" id="id"  [(ngModel)]="node.Id">
+
+              <p class="sectionTitle center-absolute-horizontal"> Node Information </p>
+              <div class="form-group">
+                <label for="name" class="text-muted text-light">
+                  Name<sup style="color:#c50000">*</sup>
+                </label>
+                <input type="text" class="form-control" name="name" id="name"  [(ngModel)]="node.Name" required>
+
+              </div>
+              <div class="form-group row">
+                <div class="col-md-6">
+                  <label for="nodetype" class="text-muted text-light">
+                    Node Type <sup style="color:#c50000">*</sup>
+                  </label>
+                  <select class="form-control" id="nodetype"  name="nodetypeid" [(ngModel)]="node.NodeTypeId" required>
+                    <option *ngFor="let nodetype of nodetypes" [value]="nodetype.Id">
+                      {{nodetype.Name}}
+                    </option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group row">
+                    <div class="col-md-6">
+                      <label for="page" class="text-muted text-light">
+                        Page <sup style="color:#c50000">*</sup>
+                      </label>
+                      <input type="number" class="form-control" id="page" [(ngModel)]="node.Page" name="page" required>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+          <div class="col-md-6">
+              <section class="topRowInternalContainer">
+                  <p class="sectionTitle center-absolute-horizontal"> Node Relations </p>
+            <label for="parentnode" class="text-muted text-light">
+              Parent Nodes <sup style="color:#c50000">*</sup>
+            </label>
+            <ng-select
+              [items]="relatednodes"
+              [multiple]="true"
+              [closeOnSelect]="false"
+              [searchable]="true"
+              name="parentNodes"
+              bindLabel="Name"
+              bindValue="Id"
+              placeholder="Select Parent Node"
+              [(ngModel)]="node.ParentNodes">
+            </ng-select>
+            </section>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="action-buttons col-md-6">
+      <button class="m-r-xs" class="btn btn-primary ">Save</button>
+
+      <span routerLink="/nodes/related/{{node.Id}}" routerLinkActive="active" class="btn btn-success">Cancel</span>
+    </div>
+  </form>
+
+</div>
