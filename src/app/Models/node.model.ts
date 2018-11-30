@@ -20,6 +20,13 @@ export class Node {
   ParentNodes: number[];
 }
 
+export class NodeDescription {
+  Id: number;
+  Title: string;
+  Description: string;
+}
+
+
 export class ParentNode {
   Id: number;
   ParentNodeId: number;

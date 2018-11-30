@@ -8,6 +8,8 @@ import {NgxBarcodeModule} from 'ngx-barcode';
 import {NgSelectModule} from '@ng-select/ng-select';
 import {ROUTES} from './app.routes';
 import {AppComponent} from './app.component';
+import { CKEditorModule } from 'ng2-ckeditor';
+import { CkEditorComponent } from './components/ckeditor/ckeditor.component';
 
 // App views
 import {DashboardsModule} from './views/dashboards/dashboards.module';
@@ -29,7 +31,8 @@ import {NodeServices} from './Services/node.service';
     AppComponent,
     NodeListComponent,
     RelatedNodeListComponent,
-    AddNodeComponent
+    AddNodeComponent,
+    CkEditorComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +44,8 @@ import {NodeServices} from './Services/node.service';
     DashboardsModule,
     LayoutsModule,
     AppviewsModule,
-    RouterModule.forRoot(ROUTES)
+    RouterModule.forRoot(ROUTES),
+    CKEditorModule
   ],
   providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}, NodeServices],
   bootstrap: [AppComponent]
