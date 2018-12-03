@@ -6,5 +6,7 @@ export class ApiUrl {
   public static getRelatedNodes = '/RelatedNodes/';
   public static getNodes = ApiUrl.baseUrl + 'Nodes/';
 
+  public static getNodeDescriptions = ApiUrl.baseUrl + 'NodeDescription/';
+
 }
 

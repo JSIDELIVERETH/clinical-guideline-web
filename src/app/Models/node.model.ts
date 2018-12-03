@@ -24,6 +24,7 @@ export class NodeDescription {
   Id: number;
   Title: string;
   Description: string;
+  IsCondition: boolean;
 }
 
 
