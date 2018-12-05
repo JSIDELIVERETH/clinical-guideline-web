@@ -9,7 +9,6 @@ import {NgSelectModule} from '@ng-select/ng-select';
 import {ROUTES} from './app.routes';
 import {AppComponent} from './app.component';
 import { CKEditorModule } from 'ng2-ckeditor';
-import { CkEditorComponent } from './components/ckeditor/ckeditor.component';
 
 // App views
 import {DashboardsModule} from './views/dashboards/dashboards.module';
@@ -31,8 +30,7 @@ import {NodeServices} from './Services/node.service';
     AppComponent,
     NodeListComponent,
     RelatedNodeListComponent,
-    AddNodeComponent,
-    CkEditorComponent
+    AddNodeComponent
   ],
   imports: [
     BrowserModule,
