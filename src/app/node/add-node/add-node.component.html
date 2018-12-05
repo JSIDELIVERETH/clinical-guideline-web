@@ -54,6 +54,7 @@
                     </option>
                   </select>
                 </div>
+
                 <div class="col-md-6">
                   <div class="form-group row">
                     <div class="col-md-6">
@@ -106,27 +107,44 @@
       <div class="ibox-content">
         <div class="row">
           <div class="col-md-12">
-            <div class="form-group">
+              <div class="form-group">
+            <div class="row">
+              <div class="col-md-9">
 
                 <input type="text" class="form-control hidden" name="id" id="id"  [(ngModel)]="node.Id">
               <label for="title" class="text-muted text-light">
-                Title<sup style="color:#c50000">*</sup>
+                Title
               </label>
-
-              <input type="text" class="form-control" name="title" id="title" [(ngModel)]="nodedescription.Title"  required>
-
+              <input type="text" class="form-control" name="title" id="title" [(ngModel)]="nodedescription.Title">
+              </div>
+              <div class="col-md-3">
+                  <div class="checkbox">
+                  <input type="checkbox" name="isCondition" id="isCondition" [(ngModel)]="nodedescription.IsCondition"><label>Conditional Questions</label>
+                </div>
+              </div>
             </div>
-            <ckeditor
+
+            <div class="row">
+
+                <div class="col-md-12">
+                <label for="Description" class="text-muted text-light">
+                    Description
+                  </label>
+                  <ckeditor
                 [(ngModel)]="nodedescription.Description"
                 #myckeditor="ngModel"
+                id="Description"
                 name="Description"
                 [config]="{uiColor: '#a4a4a4'}"
                 debounce="500">
-              </ckeditor>
+                    </ckeditor>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
     <div class="action-buttons col-md-6">
       <button class="m-r-xs" class="btn btn-primary ">Save</button>

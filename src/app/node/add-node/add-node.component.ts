@@ -65,7 +65,10 @@ export class AddNodeComponent implements OnInit {
   }
   getNodeDescription(id: number)
   {
-    this.nodeService.getNodeDescription(id).subscribe(res => { this.nodedescription = res; });
+    this.nodeService.getNodeDescription(id).subscribe(res => {
+      if (res) {
+        this.nodedescription = res; }
+      });
   }
   onSubmit({ value, valid }: { value: any; valid: boolean }) {
     // this.node = value;
