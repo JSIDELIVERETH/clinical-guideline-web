@@ -98,14 +98,14 @@
     </div>
   </form>
 
-  <form form #createDescriptionForm="ngForm" id="nodeForm" novalidate (ngSubmit)="onNodeDescriptionSubmit(createDescriptionForm)">
+  <form *ngIf='node.Id' form #createDescriptionForm="ngForm" id="nodeForm" novalidate (ngSubmit)="onNodeDescriptionSubmit(createDescriptionForm)">
     <div class="ibox">
       <div class="ibox-title boxTitle" style="border-bottom: 1px solid #f3f4f4">
         <p class="title-style">Node Description Information</p>
       </div>
       <div class="ibox-content">
         <div class="row">
-          <div class="col-md-9">
+          <div class="col-md-12">
             <div class="form-group">
 
                 <input type="text" class="form-control hidden" name="id" id="id"  [(ngModel)]="node.Id">
