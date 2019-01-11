@@ -135,7 +135,11 @@
                 #myckeditor="ngModel"
                 id="Description"
                 name="Description"
-                [config]="{uiColor: '#a4a4a4'}"
+                [config]="{uiColor: '#a4a4a4', 
+                    filebrowserBrowseUrl: 'http://35.184.137.237:8915/MyImages',
+                    filebrowserImageBrowseUrl: 'http://35.184.137.237:8915/MyImages',
+                    filebrowserUploadUrl: 'http://35.184.137.237:8915/api/QuickUpload',
+                    filebrowserImageUploadUrl: 'http://35.184.137.237:8915/api/QuickUpload'}"
                 debounce="500">
                     </ckeditor>
               </div>
