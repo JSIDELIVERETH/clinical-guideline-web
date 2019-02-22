@@ -153,6 +153,12 @@ export class AddNodeComponent implements OnInit {
     }
   }
 
+  onFileUploadRequest(fileUploadEvent) {
+    const fileName = fileUploadEvent.data.requestData.upload.name;
+    const fileExtension = fileName.substr(fileName.lastIndexOf('.') + 1);
+    fileUploadEvent.data.requestData.upload.name = this.node.Id + '.' + fileExtension;
+  }
+
   ngOnInit() {
     this.nodeService.getNodeTypes().subscribe(
       res => {
