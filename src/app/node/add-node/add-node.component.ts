@@ -90,7 +90,7 @@ export class AddNodeComponent implements OnInit {
           }
           else
           {
-            this.router.navigate(['/nodes/ASMPT']);
+            this.router.navigate(['/nodes/FMGDC']);
             this.submitted = false;
           }
         }, 1000);
@@ -125,7 +125,7 @@ export class AddNodeComponent implements OnInit {
           }
           else
           {
-            this.router.navigate(['/nodes/ASMPT']);
+            this.router.navigate(['/nodes/FMGDC']);
             this.submitted = false;
           }
         }, 1000);

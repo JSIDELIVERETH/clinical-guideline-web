@@ -10,7 +10,7 @@ import {TopNavigationLayoutComponent} from './components/common/layouts/topNavig
 
 export const ROUTES: Routes = [
   // Main redirect
-  {path: '', redirectTo: 'nodes', pathMatch: 'full'},
+  {path: '', redirectTo: 'nodes/FMGDC', pathMatch: 'full'},
 
   // App views
   {
