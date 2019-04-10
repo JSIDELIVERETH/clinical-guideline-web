@@ -25,5 +25,5 @@ export const ROUTES: Routes = [
     ]
   },
   // Handle all other routes
-  {path: '**', redirectTo: 'nodes'}
+  {path: '**', redirectTo: 'nodes/FMGDC'}
 ];
